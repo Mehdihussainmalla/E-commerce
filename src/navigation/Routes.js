@@ -3,6 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 
 import {useSelector} from 'react-redux';
+import HeaderCustom from '../Components/HeaderCustom';
 
 import AuthStack from './AuthStack';
 
@@ -15,8 +16,10 @@ export default function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+   
         {true ? MainStack(Stack) : AuthStack(Stack)}
       </Stack.Navigator>
+      
     </NavigationContainer>
   );
 }

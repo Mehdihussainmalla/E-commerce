@@ -1,4 +1,4 @@
-import { requireNativeComponent } from 'react-native';
+import {requireNativeComponent} from 'react-native';
 
 export default {
   // dropdownTriangle: require('../assets/images/ic_dropdown.png'),
@@ -502,5 +502,19 @@ export default {
   // icVoice: require('../assets/images/icVoice.png'),
   // icDropdown4: require('../assets/images/ic_drpdwn4.png'),
   // icMegaSafe: require('../assets/images/ic_label.png'),
-  icHumberIcon : require('../assets/images/hamburger-icon.png')
+  icHumberIcon: require('../assets/images/hamburger-icon.png'),
+  icBackIcon: require('../assets/images/left-arrow.png'),
+  profileIcon: require('../assets/images/profile-icon.png'),
+  ic_Profile_Image: require('../assets/images/pp.png'),
+  cartBasket: require('../assets/images/cartimage.jpg'),
+  privacyIcon: require('../assets/images/privacy.png'),
+  historyIcon: require('../assets/images/history.png'),
+  rightArrow: require('../assets/images/right-arrow.png'),
+  helpSupport: require('../assets/images/help-support.png'),
+  setting_icon: require('../assets/images/setting-icon.png'),
+  invite_icon: require('../assets/images/invite.png'),
+  logoutIcon: require('../assets/images/logout-icon.png'),
+  cartIcon  : require ('../assets/images/cart-icon.png'),
+   searchIcon : require('../assets/images/search-icon.png'),
+   logoIcon : require ('../assets/images/logo-icon.png')
 };

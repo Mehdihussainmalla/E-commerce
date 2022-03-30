@@ -10,7 +10,8 @@ import {
 } from 'react-native';
 import imagePath from '../constants/imagePath';
 
-const HeaderCustom = () => {
+const HeaderCustom = ({navigation}) => {
+  console.log(navigation,"props")
   return (
     <View style={styles.container}>
       <View style={styles.leftcontainer}>
@@ -18,8 +19,7 @@ const HeaderCustom = () => {
   
         <View style={styles.hamburgerview}>
         <TouchableOpacity 
-        // onPress={()=> navigation.toggleDrawer('Drawer')}
-        >
+        onPress={()=> navigation.navigate('Cart')}>
           <Image
             style={styles.hamburgurimage}
             source={imagePath.icHumberIcon}></Image>
@@ -29,7 +29,7 @@ const HeaderCustom = () => {
 
         <View style={styles.icon}>
           <Image
-            source={imagePath.icHumberIcon}
+            source={imagePath.cartIcon}
             style={{height: 37, width: 60, marginLeft: 10}}></Image>
         </View>
 
@@ -42,16 +42,16 @@ const HeaderCustom = () => {
       <View style={styles.righcontainer}>
         <View style={styles.searchicon}>
           <Image
-            source={imagePath.icHumberIcon}
+            source={imagePath.searchIcon}
             style={styles.searchiconlogo}></Image>
         </View>
 
         <TouchableOpacity 
-        // onPress={() => navigation.navigate('Cart')}
+        onPress={() => navigation.navigate('MyOrders')}
         >
           <View style={styles.cardview}>
             <Image
-              source={imagePath.icHumberIcon}
+              source={imagePath.logoIcon}
               style={styles.cardicon}></Image>
           </View>
         </TouchableOpacity>

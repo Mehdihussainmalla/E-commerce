@@ -214,17 +214,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
     },
     layout: {
-        //height:150,
-        //width:120,
-        //borderStartWidth:1,
-        //borderEndWidth:1,
-        //borderLeftWidth:5,
-        //borderRightWidth:5,
-        //borderTopRightRadius:10,
-        //borderBottomRightRadius:10,
-        //borderBottomRadius:10,
-        //borderTopStartRadius:10,
-        //alignItems:'center',
+       
         borderRadius: 5,
         flex: 1,
         justifyContent: 'space-between',

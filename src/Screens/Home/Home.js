@@ -13,10 +13,10 @@ import HeaderCustom from '../../Components/HeaderCustom';
 import WrapperContainer from '../../Components/WrapperContainer';
 import { styles } from './styles';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <WrapperContainer>
-      <HeaderCustom />
+      <HeaderCustom  navigation={navigation}/>
       <ScrollView>
         <Listitems />
       </ScrollView>
