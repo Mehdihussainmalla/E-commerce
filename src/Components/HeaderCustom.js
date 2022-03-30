@@ -19,7 +19,8 @@ const HeaderCustom = ({navigation}) => {
   
         <View style={styles.hamburgerview}>
         <TouchableOpacity 
-        onPress={()=> navigation.navigate('Cart')}>
+        // onPress={()=> navigation.toggleDrawer()}
+        >
           <Image
             style={styles.hamburgurimage}
             source={imagePath.icHumberIcon}></Image>

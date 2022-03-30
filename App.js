@@ -1,5 +1,5 @@
 import React from 'react';
-import 'react-native-gesture-handler'
+// import 'react-native-gesture-handler'
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 // import SplashScreen from 'react-native-splash-screen';
 import {Provider} from 'react-redux';

@@ -8,8 +8,8 @@ export default function (Stack) {
   return (
     <>
       <Stack.Screen
-        name={navigationStrings.HOME}
-        component={Home}
+        name={navigationStrings.LOGIN}
+        component={Login}
         // component={LoginLayoutFour}
         options={{headerShown: false}}
       />

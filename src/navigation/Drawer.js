@@ -6,18 +6,19 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 // import Profile from '../screens/Profile/Profile';
 // import Cart from '../screens/card/Cart';
 // import Banner from '../screens/Banner/Banner';
-Home
 
 
 // import { DrawerContent } from '../DrawerContent';
 // DrawerScreen
 import { Home, Profile, Cart,  } from '../Screens';
 import { DrawerCustom } from './DrawerCustom'
+import TabStack from './TabStack';
+import navigationStrings from './navigationStrings';
 
 
 const Drawer = createDrawerNavigator();
 
-export default function NavigationUsingdrawer() {
+export default function DrawerStack() {
   return (
     <Drawer.Navigator drawerContent={(props=><DrawerCustom {...props} /> )}
       screenOptions={{
@@ -25,7 +26,7 @@ export default function NavigationUsingdrawer() {
         
       }}>
       <Drawer.Screen
-        name="Home"
+        name={navigationStrings.HOME}
         component={Home}
         options={{
           headerShown: false,
@@ -33,7 +34,7 @@ export default function NavigationUsingdrawer() {
         }}
       />
       <Drawer.Screen
-        name="Cart"
+        name={navigationStrings.CART}
         component={Cart}
         options={{
           headerShown: false,
@@ -41,11 +42,17 @@ export default function NavigationUsingdrawer() {
         }}
       />
       <Drawer.Screen
-        name="Profile"
+        name={navigationStrings.PROFILE}
         component={Profile}
         options={{
           headerShown: false,
-         
+        }}
+      />
+      <Drawer.Screen
+        name={navigationStrings.TABSTACK}
+        component={TabStack}
+        options={{
+          headerShown: false,
         }}
       />
 

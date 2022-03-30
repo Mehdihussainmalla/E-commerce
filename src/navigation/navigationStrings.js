@@ -4,5 +4,7 @@ export default {
   CART:'cart',
   PROFILE :'profile',
   MYORDERS :'myorders',
+  TABSTACK:'tabStack',
+  DRAWER:'drawer',
   
 };

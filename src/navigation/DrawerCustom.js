@@ -10,7 +10,9 @@ import {
   TouchableRipple,
   Switch,
 } from 'react-native-paper';
-import imagePath from '../../constants/imagePath';
+import imagePath from '../constants/imagePath';
+// import imagePath from '../../constants/imagePath';
+
 
 export function DrawerCustom(props) {
   return (
