@@ -10,7 +10,7 @@ const WrapperContainer = ({
   children,
   bgColor = colors.white,
   statusBarColor = colors.white,
-  barStyle = 'dark-content',
+  barStyle = '#87CEEB',
 }) => {
   return (
     <SafeAreaView

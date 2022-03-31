@@ -516,5 +516,7 @@ export default {
   logoutIcon: require('../assets/images/logout-icon.png'),
   cartIcon  : require ('../assets/images/cart-icon.png'),
    searchIcon : require('../assets/images/search-icon.png'),
-   logoIcon : require ('../assets/images/logo-icon.png')
+   logoIcon : require ('../assets/images/logo-icon.png'),
+   homeIcon : require ('../assets/images/Home.png'),
+   loginImage: require ('../assets/images/login-image.png'),
 };

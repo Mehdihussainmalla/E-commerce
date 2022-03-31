@@ -19,7 +19,7 @@ const HeaderCustom = ({navigation}) => {
   
         <View style={styles.hamburgerview}>
         <TouchableOpacity 
-        // onPress={()=> navigation.toggleDrawer()}
+         onPress={()=> navigation.toggleDrawer('Drawer')}
         >
           <Image
             style={styles.hamburgurimage}
@@ -48,7 +48,7 @@ const HeaderCustom = ({navigation}) => {
         </View>
 
         <TouchableOpacity 
-        onPress={() => navigation.navigate('MyOrders')}
+       onPress={()=> navigation.navigate('MyOrders')}
         >
           <View style={styles.cardview}>
             <Image

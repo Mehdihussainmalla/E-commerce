@@ -4,9 +4,9 @@ import React from 'react';
 
 import {useSelector} from 'react-redux';
 import HeaderCustom from '../Components/HeaderCustom';
+import { Login } from '../Screens';
 
 import AuthStack from './AuthStack';
-
 import MainStack from './MainStack';
 const Stack = createStackNavigator();
 
@@ -17,7 +17,7 @@ export default function Routes() {
     <NavigationContainer>
       <Stack.Navigator>
    
-        {false ? MainStack(Stack) : AuthStack(Stack)}
+        {false? MainStack(Stack) : AuthStack(Stack)}
       </Stack.Navigator>
       
     </NavigationContainer>

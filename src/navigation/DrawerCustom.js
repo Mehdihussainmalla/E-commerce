@@ -11,13 +11,12 @@ import {
   Switch,
 } from 'react-native-paper';
 import imagePath from '../constants/imagePath';
-// import imagePath from '../../constants/imagePath';
 
 
 export function DrawerCustom(props) {
   return (
     <View style={{flex: 1}}>
-      <DrawerContentScrollView {...props}>
+      <DrawerContentScrollView {...props} >
         <View style={style.headingview}>
           <Image style={style.imageicon} source={imagePath.cartBasket} />
 
@@ -68,12 +67,12 @@ export function DrawerCustom(props) {
               props.navigation.navigate('Profile');
             }}
           />
-          <DrawerItem
+          {/* <DrawerItem
             label="Banner"
             onPress={() => {
               props.navigation.navigate('Banner');
             }}
-          />
+          /> */}
         </Drawer.Section>
       </DrawerContentScrollView>
       <View

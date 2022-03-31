@@ -11,7 +11,7 @@ import React from 'react';
 import Listitems from '../../Components/Listitems';
 import HeaderCustom from '../../Components/HeaderCustom';
 import WrapperContainer from '../../Components/WrapperContainer';
-import { styles } from './styles';
+
 
 const Home = ({navigation}) => {
   return (

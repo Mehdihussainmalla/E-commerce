@@ -11,7 +11,7 @@ function TabStack() {
     <Tab.Navigator
       screenOptions={{
         tabBarActiveTintColor: 'red',
-        tabBarInActiveTintColor: 'yellow',
+        tabBarInActiveTintColor: '#87CEEB',
       }}>
       <Tab.Screen
         name="Home"
@@ -20,7 +20,7 @@ function TabStack() {
           headerShown: false,
           tabBarIcon: ({focused}) => (
             <Image
-              source={imagePath.ic_Profile_Image}
+              source={imagePath.homeIcon}
               style={{width: 30, height: 30, top: 5}}
             />
           ),
@@ -52,19 +52,7 @@ function TabStack() {
           ),
         }}
       />
-        {/* <Tab.Screen
-        name={navigationStrings.DRAWER}
-        component={DrawerStack}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({focused}) => (
-            <Image
-              source={imagePath.cartBasket}
-              style={{height: 31, width: 31, top: 5}}
-            />
-          ),
-        }}
-      /> */}
+       
     </Tab.Navigator>
   );
 }

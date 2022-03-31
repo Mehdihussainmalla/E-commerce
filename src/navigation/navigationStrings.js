@@ -6,5 +6,7 @@ export default {
   MYORDERS :'myorders',
   TABSTACK:'tabStack',
   DRAWER:'drawer',
+  MAINSTACK :'mainstack'
+  
   
 };

@@ -11,7 +11,7 @@ function Footer() {
     <Tab.Navigator
       screenOptions={{
         tabBarActiveTintColor: 'red',
-        tabBarInActiveTintColor: 'yellow',
+        tabBarInActiveTintColor: 'Blue',
       }}>
       <Tab.Screen
         name="Home"
@@ -20,7 +20,7 @@ function Footer() {
           headerShown: false,
           tabBarIcon: ({focused}) => (
             <Image
-              source={imagePath.ic_Profile_Image}
+              source={imagePath.cartBasket}
               style={{width: 30, height: 30, top: 5}}
             />
           ),
