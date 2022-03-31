@@ -25,28 +25,28 @@ export default function DrawerStack() {
           
         }}
       />
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name={navigationStrings.CART}
         component={Cart}
         options={{
           headerShown: false,
          
         }}
-      />
-      <Drawer.Screen
+      /> */}
+      {/* <Drawer.Screen
         name={navigationStrings.PROFILE}
         component={Profile}
         options={{
           headerShown: false,
         }}
-      />
-      {/* <Drawer.Screen
+      /> */}
+      <Drawer.Screen
         name={navigationStrings.TABSTACK}
         component={TabStack}
         options={{
           headerShown: false,
         }}
-      /> */}
+      />
 
     </Drawer.Navigator>
   );
