@@ -9,43 +9,40 @@ export default function Login() {
   return (
     <WrapperContainer>
       <View style={styles.loginpage}>
-        
-        <View  style={styles.loginprofile}>
-          <ImageBackground
-          style={styles.loginimage}
-          source={imagePath.loginImage}>
 
-           <Text
-           style={styles.heading}>
-             E-COMMERCE</Text>
-             <Text
-           style={styles.caption}>
-             A Fresh Approach to Shopping</Text>
-            </ImageBackground>
+        <View style={{height:'20%', width:'100%',
+      justifyContent:'center'}}>
+          <Text style={styles.headingtext}>Welcome To E-Commerce</Text>
         </View>
-        <View   style={styles.emailview}>
-        <View 
-       style={styles.passworddetails}>
-          <TextInput style ={styles.emailinput} placeholder="Enter Email" keyboardType='numeric'/>
-          </View>
+        <View>
+          <Text style={styles.login}>Login</Text>
+        </View>
+        {/* <View> */}
+        <View  style={styles.emailview}> 
+        
+  
+          <TextInput style ={styles.emailinput} placeholder="Enter Email" />
+          {/* </View> */}
         </View>
         <View style={styles.passwordview}>
-        <View 
-       style={styles.passworddetails}>
-          <TextInput style ={styles.passwordinput} placeholder="Enter Password" keyboardType='numeric'/>
+        <View>
+          <TextInput style ={styles.passwordinput} placeholder="Enter Password" secureTextEntry={true} />
         </View>
         </View>
-         
+        <TouchableOpacity>  
            <View style={styles.btnlogin}>
+             
            <Text style ={styles.btn}>Login</Text>
+           
            </View>
+           </TouchableOpacity>
            <View style={styles.signup}>
              <TouchableOpacity>
-           <Text style={styles.newaccount}>create new account?</Text>
+           <Text style={styles.newaccount}>Create new account?</Text>
            </TouchableOpacity>
 
            <TouchableOpacity>
-           <Text style={styles.passwordbtn}>forget password?</Text>
+           <Text style={styles.passwordbtn}>Forget password?</Text>
            </TouchableOpacity>
            </View>
          </View>

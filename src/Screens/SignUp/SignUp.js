@@ -9,12 +9,49 @@ import { styles } from './style';
 const SignUp = () => {
   return (
       <WrapperContainer>
-        <View style={styles.signupscreen}>
+        <View  style={{flex:1,}}>
 
-  <Text>Hello</Text>
+          <View style={styles.signupview}>
+            <ImageBackground 
+            style={styles.bgc}            
+            source={imagePath.bgc}/>
+          </View>
 
-        </View>
+          <View  style={styles.emailview}>
+              
+            <Image source={imagePath.emailLogo}  style={styles.emaillogo}/>
+            <TextInput style={styles.TextInput} placeholder='enter your mail' />
+        
+            </View>
+            <View  style={styles.passwordview}>
+              
+            <Image source={imagePath.passwordIcon}  style={styles.passwordlogo}/>
+            <TextInput style={styles.TextInput2} placeholder='enter password' secureTextEntry={true}/>
+        
+            </View>
+            <View  style={styles.cnfmpassView}>
+              
+            <Image source={imagePath.passwordIcon}  style={styles.confmpasswordlogo}/>
+            <TextInput style={styles.TextInput3} placeholder='enter password' secureTextEntry={true}/>
+        
+            </View>
+            <View style={styles.btnview}>
     
+              <Text style={styles.signupbtn}>Sign Up</Text>
+      
+            </View>
+            <View style={styles.signtext}>
+              
+              <Text style ={styles.text1}>already have an account? </Text>
+              <TouchableOpacity>
+               <Text style={styles.text2}>signup</Text>
+               </TouchableOpacity>
+            </View>
+
+
+            </View>
+            
+            
     </WrapperContainer>
   )
 }
