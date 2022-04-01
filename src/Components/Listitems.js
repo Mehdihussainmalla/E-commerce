@@ -148,6 +148,7 @@ const Listitems = () => {
     ];
 
     return (
+        <View  style={{backgroundColor:'lightgrey'}}>
         <View>
 
             <FlatList
@@ -184,7 +185,7 @@ const Listitems = () => {
                 renderItem={({ item }) => {
                     return (
                         <View style={styles.card}>
-                            <TouchableOpacity>
+                            <TouchableOpacity activeOpacity={.9}>
                                 <View style={styles.layout}>
                                     <Image style={styles.images} source={{ uri: item.image }} />
 
@@ -198,6 +199,7 @@ const Listitems = () => {
                 }}
             />
         </View>
+        </View>
     );
 };
 
@@ -205,20 +207,21 @@ const styles = StyleSheet.create({
     card: {
         flex: 1,
         //justifyContent:'center',
-        margin: 3,
+        margin: 2,
         backgroundColor: '#ffff',
         //marginEnd:2,
-        paddingTop: 1,
+       // paddingTop: 1,
         marginBottom: 5,
         flexDirection: 'row',
-        borderRadius: 8,
+       // alignContent:'center',
+        borderRadius: 5,
     },
     layout: {
        
-        borderRadius: 5,
+        //borderRadius: 5,
         flex: 1,
         justifyContent: 'space-between',
-        backgroundColor: '#ffff',
+      //  backgroundColor: '//#87CEEB',
 
     },
     splashview: {

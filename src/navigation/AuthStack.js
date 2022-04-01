@@ -4,6 +4,7 @@ import {Home, Login} from '../Screens';
 import navigationStrings from './navigationStrings';
 import MainStack from './MainStack';
 import TabStack from './TabStack';
+import SignUp from '../Screens/SignUp/SignUp';
 
 export default function (Stack) {
   return (
@@ -15,6 +16,12 @@ export default function (Stack) {
         // component={LoginLayoutFour}
         options={{headerShown: false}}
       />
+      {/* <Stack.Screen
+        name={navigationStrings.SIGNUP}
+        component={SignUp}
+        // component={LoginLayoutFour}
+        options={{headerShown: false}}
+      /> */}
     
     </>
   );

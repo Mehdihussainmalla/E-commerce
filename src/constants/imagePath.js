@@ -16,4 +16,7 @@ export default {
    logoIcon : require ('../assets/images/logo-icon.png'),
    homeIcon : require ('../assets/images/Home.png'),
    loginImage: require ('../assets/images/login-image.png'),
+  cartItemImage : require ('../assets/images/carthomeicon.png'),
+  profileImage : require ('../assets/images/profile.png'),
+     bgc : require('../assets/images/bgc.png')
 };

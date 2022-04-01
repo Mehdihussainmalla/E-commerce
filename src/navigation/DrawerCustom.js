@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image,ImageBackground} from 'react-native';
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import {
   Avatar,
@@ -11,36 +11,73 @@ import {
   Switch,
 } from 'react-native-paper';
 import imagePath from '../constants/imagePath';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
-export function DrawerCustom(props) {
+export function DrawerCustom(props,{navigation}) {
   return (
     <View style={{flex: 1}}>
       <DrawerContentScrollView {...props} >
         <View style={style.headingview}>
-          <Image style={style.imageicon} source={imagePath.cartBasket} />
+         
+          <Image style={style.imageicon} source={imagePath.ic_Profile_Image} />
 
           <Text style={style.headingtext}>Mehdi Hussain Malla</Text>
           <Caption style={style.caption}>@mehdihussainmalla</Caption>
+          
         </View>
-
+    <TouchableOpacity 
+   // onPress={()=> navigation.navigate('Cart')}
+    >  
         <View style={style.home}>
           <Image style={style.homeimage} source={imagePath.helpSupport}>
         
                   </Image>
 
            <Text style={style.hometext}> HOME </Text>
+           
 
         </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity  
+        //onPress={()=> navigation.navigate('cart')}
+        >
 
         <View style={style.home}>
+          <Image style={style.homeimage} source={imagePath.cartItemImage}>
+        
+                  </Image>
+
+           <Text style={style.hometext}> CART</Text>
+
+        </View>
+        </TouchableOpacity>
+
+
+        <TouchableOpacity  
+        //onPress={()=> navigation.navigate('cart')}
+        >
+        <View style={style.profile}>
+          <Image style={style.profileimage} 
+          source={imagePath.profileImage}>
+        
+                  </Image>
+
+           <Text style={style.profiletext}> PROFILE</Text>
+
+        </View>
+        </TouchableOpacity>
+
+
+        {/* <View style={style.home}>
           <Image style={style.homeimage} source={imagePath.ic_Profile_Image}>
         
                   </Image>
 
            <Text style={style.hometext}> Cart</Text>
 
-        </View>
+        </View> */}
 
         <Drawer.Section
           style={{
@@ -49,13 +86,13 @@ export function DrawerCustom(props) {
             
             justifyContent: 'center',
           }}>
-          <DrawerItem
+          {/* <DrawerItem
             label="Home"
             onPress={() => {
               props.navigation.navigate('Home');
             }}
-          />
-          <DrawerItem
+          /> */}
+          {/* <DrawerItem
             label="Cart"
             onPress={() => {
               props.navigation.navigate('Cart');
@@ -66,7 +103,7 @@ export function DrawerCustom(props) {
             onPress={() => {
               props.navigation.navigate('Profile');
             }}
-          />
+          /> */}
           {/* <DrawerItem
             label="Banner"
             onPress={() => {
@@ -84,12 +121,14 @@ export function DrawerCustom(props) {
           alignContent: 'space-between',
           flexDirection: 'row',
         }}>
+          <TouchableOpacity>
           <View style={style.logoutview}>
         <Image
           style={style.logouticon}
-          source={imagePath.cartBasket}></Image>
+          source={imagePath.logoutIcon}></Image>
         <Text style={style.logouttext}>Logout</Text>
         </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -102,6 +141,7 @@ const style = StyleSheet.create({
     paddingRight: 25,
     margin: 10,
     paddingTop: 10,
+    backgroundColor:'#87CEEB'
   },
   headingtext: {
     fontSize: 20,
@@ -134,6 +174,7 @@ const style = StyleSheet.create({
         width:"100%",
         flexDirection:'row',
         justifyContent:'flex-start',
+        //backgroundColor:'#87CEEB'
       },
       homeimage:{
         height:20,
@@ -143,6 +184,26 @@ const style = StyleSheet.create({
                
       },
       hometext:{
+        marginLeft:20
+      },
+      profile:{
+        height:25,
+        //backgroundColor:'#87CEEB',
+        margin:5,
+        paddingTop:5,
+        width:"100%",
+        flexDirection:'row',
+        justifyContent:'flex-start',
+      },
+      profileimage:{
+        height:20,
+        width:20,
+        padding:10,
+        marginLeft:23,
+        paddingTop:5
+               
+      },
+      profiletext:{
         marginLeft:20
       }
 });

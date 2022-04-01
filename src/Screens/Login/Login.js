@@ -4,6 +4,7 @@ import WrapperContainer from '../../Components/WrapperContainer';
 import {View, Text,Image,TextInput, ImageBackground,} from 'react-native';
 import { styles } from './styles';
 import imagePath from '../../constants/imagePath';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 export default function Login() {
   return (
     <WrapperContainer>
@@ -21,29 +22,35 @@ export default function Login() {
            style={styles.caption}>
              A Fresh Approach to Shopping</Text>
             </ImageBackground>
-
-
-          {/* <Text
-           style={styles.heading}>
-             E-COMMERCE</Text>
-             <Text
-           style={styles.caption}>
-             A Fresh Approach to Shopping</Text> */}
         </View>
-        <View style={styles.logindetails}  >
-          <TextInput style ={styles.logininput} placeholder="Email Address" keyboardType='default'/>
-        </View>
+        <View   style={styles.emailview}>
         <View 
-       style={styles.passworddetails} 
-         >
+       style={styles.passworddetails}>
+          <TextInput style ={styles.emailinput} placeholder="Enter Email" keyboardType='numeric'/>
+          </View>
+        </View>
+        <View style={styles.passwordview}>
+        <View 
+       style={styles.passworddetails}>
           <TextInput style ={styles.passwordinput} placeholder="Enter Password" keyboardType='numeric'/>
         </View>
-         <View style={styles.btnstyle} >
+        </View>
+         
+           <View style={styles.btnlogin}>
            <Text style ={styles.btn}>Login</Text>
+           </View>
+           <View style={styles.signup}>
+             <TouchableOpacity>
+           <Text style={styles.newaccount}>create new account?</Text>
+           </TouchableOpacity>
+
+           <TouchableOpacity>
+           <Text style={styles.passwordbtn}>forget password?</Text>
+           </TouchableOpacity>
+           </View>
          </View>
-
-
-      </View>
+         
+      
     </WrapperContainer>
   );
 }
