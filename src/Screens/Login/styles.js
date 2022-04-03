@@ -1,126 +1,111 @@
 import {StyleSheet, Dimensions} from 'react-native';
 
 export const styles = StyleSheet.create({
-  loginpage: {flex: 1, height: '100%', width: '100%'},
-
-  headingtext:{
-    color:'blue',
-    fontSize:25,
-    fontWeight:'bold',
-    textAlign:'center',
-    marginTop:15,
-  },
-  login:{
-    fontSize:25,
-   paddingLeft:20,
-    marginBottom:20,
-    fontWeight:'bold'
-  },
+  loginview: {
+    height: '25%',
+    width: '100%',
+    justifyContent: 'center',
 
 
-  // loginprofile: {
-  //   paddingTop: 10,
-  //   justifyContent: 'center',
-  //   width: '100%',
-  //   //backgroundColor:'yellow',
-  //   justifyContent: 'center',
-  // },
-  // loginimage: {
-  //   paddingTop: 10,
-  //   height: Dimensions.get('window').height / 4,
-  //   // width:'80%',
-  //   marginTop: 10,
-  //   justifyContent: 'center',
-  //   alignContent: 'center',
-  // },
-  // heading: {
-  //   fontSize: 30,
-  //   paddingTop: 20,
-  //   marginLeft: 20,
-  //   textAlign: 'center',
-  //   fontWeight: '500',
-  //   color: 'blue',
-  // },
-  // caption: {
-  //   fontSize: 18,
-  //   paddingTop: 30,
-  //   textAlign: 'center',
-  //   fontWeight: '200',
-  //   fontStyle: 'italic',
-  //   color: 'blue',
-  // },
-  emailview:
-   {  
-       height: '10%', 
-       width: '80%',
-        marginBottom: 10,
-   },
-   emailinput: {
-    
-     borderRadius:10,
-    height: 10,
-    padding: 20,
-    marginRight: 12,
-    fontSize: 18,
-    margin:8,
-    backgroundColor: 'lightgrey',
-    
-  },
-
-  passwordview:
-   {
-     
-       height: '15%', 
-       width: '80%',
-        marginBottom: 10,
-    
-    
-    },
-
-  passwordview:{
- height:'15%',
-  width:'80%',
+},
+  emailview: {
+    padding:1,
+  flexDirection:'row',
+  justifyContent:'flex-start',
+  height:50,
+  width:'100%'
   
 },
-  passwordinput: {
-    height: 10,
-    padding: 20,
-    marginRight: 12,
-    fontSize: 18,
-    //margin:8,
-    marginLeft:10,
-    borderRadius:10,
-    backgroundColor: 'lightgrey',
-  },
+emailicon:{
+  paddingTop :10,
+  height:20,
+  width:'8%',
+  margin:8,
+  marginLeft:10,
+},
+input1:{
+  borderRadius:10,
+  height:35,
+  width:'80%',
+  color:'black',
+  backgroundColor:'lightgrey',
+  paddingTop:5,
+},
 
-  btnlogin: {
-    height: 42,
-    width: '70%',
-    backgroundColor: '#87CEEB',
-    justifyContent: 'center',
-    borderRadius: 10,
-    marginLeft: 15,
-    paddingLeft: 10,
-  },
-  btn: {
-    textAlign: 'center',
-    fontSize: 20,
-    color: '#ffff',
-    fontWeight: '600',
-  },
-  signup: {
-    height: 20,
-    width: '70%',
-    //justifyContent: 'space-between',
-    flexDirection: 'row',
-    margin: 20,
-  },
-  newaccount: {
-    color: 'blue',
-    marginRight: 45,
-  },
-  passwordbtn: {
-    color: 'blue',
-    marginLeft: 50,
-  },
-});
+passwordview: {
+  padding:1,
+
+  flexDirection:'row',
+  justifyContent:'flex-start',
+  height:50,
+  width:'100%'
+  
+},
+passwordicon:{
+  height:20,
+  width:'8%',
+  margin:8,
+  marginLeft:10,
+  
+},
+input2:{
+  borderRadius:10,
+  height:35,
+  width:'80%',
+  color:'black',
+  backgroundColor:'lightgrey',
+  paddingTop:5,
+ 
+},
+
+btnview:{
+  marginLeft:80,
+  borderRadius:8,
+  margin:35,
+  height:45,
+  width:'60%',
+  //paddingLeft:10,
+  alignContent:'center',
+  justifyContent:'center',
+  backgroundColor:'skyblue'
+} ,
+btn:{
+  fontSize:20,
+  textAlign:'center',
+  paddingTop:1,
+  color:'#ffff'
+} ,
+
+bottontext:{
+  justifyContent:'space-between',
+  flexDirection:'row',
+  paddingTop:15,
+},
+text1:{
+  fontWeight:'300',
+  marginLeft:10,
+},
+
+signinbtn:{
+  fontSize:15,
+  fontWeight:'500',
+  marginRight:10,
+  color:'red'
+},
+privacyterms:{
+  justifyContent:'center',
+  alignContent:'center',
+  margin:20,
+  paddingTop:10,
+  flexDirection:'column',
+  alignItems:'center'
+},
+terms:{
+  
+}
+
+
+
+
+
+  })

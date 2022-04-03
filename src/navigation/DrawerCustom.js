@@ -27,7 +27,7 @@ export function DrawerCustom(props,{navigation}) {
           
         </View>
     <TouchableOpacity 
-   // onPress={()=> navigation.navigate('Cart')}
+    onPress={()=> navigation.navigate('Cart')}
     >  
         <View style={style.home}>
           <Image style={style.homeimage} source={imagePath.helpSupport}>

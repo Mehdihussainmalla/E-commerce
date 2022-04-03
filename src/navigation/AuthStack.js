@@ -9,20 +9,20 @@ import SignUp from '../Screens/SignUp/SignUp';
 export default function (Stack) {
   return (
     <>
-
-<Stack.Screen
+    <Stack.Navigator>
+      <Stack.Screen
         name={navigationStrings.LOGIN}
         component={Login}
         // component={LoginLayoutFour}
         options={{headerShown: false}}
       />
-      {/* <Stack.Screen
+      <Stack.Screen
         name={navigationStrings.SIGNUP}
         component={SignUp}
         // component={LoginLayoutFour}
         options={{headerShown: false}}
-      /> */}
-    
+      />
+    </Stack.Navigator>
     </>
   );
 }

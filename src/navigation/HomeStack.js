@@ -1,14 +1,16 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {Home, Login} from '../Screens';
+import {Home, MyOrders} from '../Screens';
 
 import navigationStrings from './navigationStrings';
 
 const Stack = createStackNavigator();
 export default function () {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator 
+   // screenOptions={{presentation:'modal'}}
+     initialRouteName={navigationStrings.HOME}>
       <Stack.Screen 
         name={navigationStrings.HOME}
         component={Home}

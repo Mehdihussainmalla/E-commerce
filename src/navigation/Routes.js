@@ -1,5 +1,5 @@
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 
 import HeaderCustom from '../Components/HeaderCustom';
@@ -13,11 +13,11 @@ export default function Routes() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-   
-        {false? MainStack(Stack) : AuthStack(Stack)}
-      </Stack.Navigator>
-      
+
+
+      {true ? MainStack(Stack) : AuthStack(Stack)}
+
+
     </NavigationContainer>
   );
 }

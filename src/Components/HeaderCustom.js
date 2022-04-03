@@ -9,6 +9,8 @@ import {
   TextInput,
 } from 'react-native';
 import imagePath from '../constants/imagePath';
+import navigationStrings from '../navigation/navigationStrings';
+
 
 const HeaderCustom = ({navigation}) => {
   console.log(navigation,"props")
@@ -19,7 +21,7 @@ const HeaderCustom = ({navigation}) => {
   
         <View style={styles.hamburgerview}>
         <TouchableOpacity 
-         onPress={()=> navigation.toggleDrawer('Drawer')}
+        onPress={()=> navigation.toggleDrawer(navigationStrings.DRAWER)}
         >
           <Image
             style={styles.hamburgurimage}
@@ -48,7 +50,7 @@ const HeaderCustom = ({navigation}) => {
         </View>
 
         <TouchableOpacity 
-       onPress={()=> navigation.navigate('MyOrders')}
+       onPress={()=> navigation.navigate(navigationStrings.PROFILE)}
         >
           <View style={styles.cardview}>
             <Image

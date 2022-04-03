@@ -3,13 +3,17 @@ import React from 'react';
 import imagePath from '../../constants/imagePath';
 import WrapperContainer from '../../Components/WrapperContainer';
 import {styles} from './style';
+import navigationStrings from '../../navigation/navigationStrings';
+import { Button } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/core';
 
-const Profile = ({navigation}) => {
+const Profile = () => {
+  const navigation= useNavigation()
   return (
     <WrapperContainer>
       <View style={styles.mainview}>
         <View style={styles.profilehead}>
-          <TouchableOpacity  onPress={()=> navigation.navigate('Home')}>
+          <TouchableOpacity  onPress={()=> navigation.navigate(navigationStrings.CART)}>
             <Image
               source={imagePath.icBackIcon}
               style={styles.backlogo}></Image>
@@ -90,10 +94,12 @@ const Profile = ({navigation}) => {
           <View style={styles.logout}>
             <Image
               source={imagePath.logoutIcon}
-              style={styles.logoutlogo}></Image>
+              style={styles.logoutlogo} />
+              <TouchableOpacity onPress={()=>navigation.navigate(navigationStrings.MYORDERS)}>
             <Text style={styles.logouttext}>Logout</Text>
+            </TouchableOpacity>
           </View>
-      </View>
+          </View>
       </View>
     </WrapperContainer>
   );
