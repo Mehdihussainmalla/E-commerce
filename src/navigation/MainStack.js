@@ -6,22 +6,21 @@ import TabStack from './TabStack';
 
 
 export default function (Stack) {
-  // const {appData, appStyle} = useSelector(state => state?.initBoot);
 
   return (
     <>
      <Stack.Navigator >
 
     
-      <Stack.Screen
+      {/* <Stack.Screen
         name={navigationStrings.TABSTACK}
         component={TabStack}
         options={{headerShown: false}}
-      />
+      /> */}
      
      <Stack.Screen
         name={navigationStrings.HOME}
-        component={Home}
+        component={TabStack}
         options={{headerShown: false}}
       />
 
@@ -36,11 +35,11 @@ export default function (Stack) {
         component={Profile}
         options={{headerShown: true}}
       /> 
-      <Stack.Screen
+      {/* <Stack.Screen
         name={navigationStrings.DRAWER}
         component={DrawerStack}
         options={{headerShown: false}}
-      />
+      /> */}
        <Stack.Screen
         name={navigationStrings.MYORDERS}
         component={MyOrders}

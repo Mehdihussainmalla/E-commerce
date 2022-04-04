@@ -20,5 +20,6 @@ export default {
   profileImage : require ('../assets/images/profile.png'),
      bgc : require('../assets/images/bgc.png'),
      emailLogo: require('../assets/images/email-logo.png'),
-     passwordIcon : require ("../assets/images/password-icon.png")
+     passwordIcon : require ("../assets/images/password-icon.png"),
+     cartHomeIcon: require ('../assets/images/carthomeicon.png')
 };

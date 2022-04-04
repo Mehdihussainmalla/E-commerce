@@ -1,4 +1,5 @@
 import { StyleSheet, } from 'react-native';
+import { moderateVerticalScale } from 'react-native-size-matters';
 export const styles = StyleSheet.create({
 
     signupview: {
@@ -19,7 +20,8 @@ export const styles = StyleSheet.create({
         height:20,
         width:'8%',
         margin:8,
-        marginLeft:10,
+        marginTop:5,
+        marginLeft:4,
     },
     input1:{
         borderRadius:10,
@@ -27,7 +29,7 @@ export const styles = StyleSheet.create({
         width:'80%',
         color:'black',
         backgroundColor:'lightgrey',
-        paddingTop:5,
+        padding:moderateVerticalScale(8)
     },
     emailview:{
         flexDirection:'row',
@@ -38,7 +40,7 @@ export const styles = StyleSheet.create({
     },
     emailicon:{
         height:20,
-        width:'8%',
+        width:'6%',
         margin:8,
         marginLeft:10,
     },
@@ -48,9 +50,8 @@ export const styles = StyleSheet.create({
         width:'80%',
         color:'black',
         backgroundColor:'lightgrey',
-        paddingTop:5,
-
-    },
+        padding: moderateVerticalScale(8) 
+       },
 
     passwordview:{
         flexDirection:'row',
@@ -61,9 +62,10 @@ export const styles = StyleSheet.create({
 
     },
         passwordicon:{
-            height:20,
-            width:'8%',
+            height:27,
+            width:'6%',
             margin:8,
+            marginTop:5,
             marginLeft:10,
 
     },
@@ -73,7 +75,7 @@ export const styles = StyleSheet.create({
         width:'80%',
         color:'black',
         backgroundColor:'lightgrey',
-        paddingTop:5,
+        padding:moderateVerticalScale(8)
         
 
 
@@ -87,9 +89,10 @@ export const styles = StyleSheet.create({
 
     },
         createpasswordicon:{
-            height:20,
-            width:'8%',
+            height:27,
+            width:'6%',
             margin:8,
+            marginTop:5,
             marginLeft:10,
 
     },
@@ -99,7 +102,7 @@ export const styles = StyleSheet.create({
         width:'80%',
         color:'black',
         backgroundColor:'lightgrey',
-        paddingTop:5,
+        padding:moderateVerticalScale,
         
 
 

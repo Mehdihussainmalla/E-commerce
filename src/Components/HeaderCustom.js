@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 import {
   View,
@@ -11,9 +12,9 @@ import {
 import imagePath from '../constants/imagePath';
 import navigationStrings from '../navigation/navigationStrings';
 
-
-const HeaderCustom = ({navigation}) => {
-  console.log(navigation,"props")
+const HeaderCustom = () => {
+  const navigation=useNavigation()
+  
   return (
     <View style={styles.container}>
       <View style={styles.leftcontainer}>
@@ -21,7 +22,7 @@ const HeaderCustom = ({navigation}) => {
   
         <View style={styles.hamburgerview}>
         <TouchableOpacity 
-        onPress={()=> navigation.toggleDrawer(navigationStrings.DRAWER)}
+       // onPress={()=> navigation.openDrawer()}
         >
           <Image
             style={styles.hamburgurimage}
@@ -50,7 +51,7 @@ const HeaderCustom = ({navigation}) => {
         </View>
 
         <TouchableOpacity 
-       onPress={()=> navigation.navigate(navigationStrings.PROFILE)}
+       //onPress={()=> navigation.navigate(navigationStrings.PROFILE)}
         >
           <View style={styles.cardview}>
             <Image

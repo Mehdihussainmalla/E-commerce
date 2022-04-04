@@ -28,7 +28,7 @@ const SignUp = ({navigation}) => {
           <View  style={styles.usernameview}>
            
              <Image  style={styles.usericon}  
-             source={ imagePath.emailLogo}/>
+             source={ imagePath.profileImage}/>
           <TextInput  style={styles.input1} placeholder="your name"/>
             </View>
 
@@ -41,13 +41,13 @@ const SignUp = ({navigation}) => {
             <View  style={styles.passwordview}>
            
              <Image  style={styles.passwordicon}  
-             source={ imagePath.emailLogo}/>
+             source={ imagePath.passwordIcon}/>
           <TextInput  style={styles.input3} secureTextEntry={true} placeholder=" Create Password"/>
             </View>
             <View  style={styles.createpasswordview}>
            
            <Image  style={styles.createpasswordicon}  
-           source={ imagePath.emailLogo}/>
+           source={ imagePath.passwordIcon}/>
         <TextInput  style={styles.input4} secureTextEntry={true} placeholder="Confirm Password"/>
           </View>
           

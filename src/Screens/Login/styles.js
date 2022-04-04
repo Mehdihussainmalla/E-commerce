@@ -1,4 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
+import { moderateVerticalScale } from 'react-native-size-matters';
 
 export const styles = StyleSheet.create({
   loginview: {
@@ -9,6 +10,7 @@ export const styles = StyleSheet.create({
 
 },
   emailview: {
+    margin:10,
     padding:1,
   flexDirection:'row',
   justifyContent:'flex-start',
@@ -19,7 +21,7 @@ export const styles = StyleSheet.create({
 emailicon:{
   paddingTop :10,
   height:20,
-  width:'8%',
+  width:'6%',
   margin:8,
   marginLeft:10,
 },
@@ -29,12 +31,12 @@ input1:{
   width:'80%',
   color:'black',
   backgroundColor:'lightgrey',
-  paddingTop:5,
+  padding:moderateVerticalScale(8)
 },
 
 passwordview: {
   padding:1,
-
+margin:10,
   flexDirection:'row',
   justifyContent:'flex-start',
   height:50,
@@ -42,19 +44,19 @@ passwordview: {
   
 },
 passwordicon:{
-  height:20,
-  width:'8%',
+  height:27,
+  width:'6%',
   margin:8,
-  marginLeft:10,
-  
-},
+  marginTop:5,
+ marginLeft:10,
+  },
 input2:{
   borderRadius:10,
   height:35,
   width:'80%',
   color:'black',
   backgroundColor:'lightgrey',
-  paddingTop:5,
+  padding:moderateVerticalScale(8)
  
 },
 
@@ -67,7 +69,7 @@ btnview:{
   //paddingLeft:10,
   alignContent:'center',
   justifyContent:'center',
-  backgroundColor:'skyblue'
+  backgroundColor:'skyblue',
 } ,
 btn:{
   fontSize:20,

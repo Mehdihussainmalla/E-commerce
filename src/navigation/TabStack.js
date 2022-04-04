@@ -13,10 +13,10 @@ function TabStack() {
         headerShown:false,
         tabBarInactiveTintColor:'green',
         tabBarActiveTintColor:'red',
-        tabBarShowLabel:false,
+        //tabBarShowLabel:false,
         tabBarStyle:{
           position:'absolute',
-          backgroundColor:'pink',borderRadius:15, bottom:5,
+          //backgroundColor:'pink',borderRadius:15, bottom:5,
           marginHorizontal:5
         }
       }}>
@@ -42,10 +42,10 @@ function TabStack() {
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Image
-              source={  imagePath.cartBasket}
+              source={  imagePath.cartHomeIcon}
 
             //{used to change the bottom tab icon}  focused ? imagePath.emailLogo: imagePath.cartBasket
-              style={{ width: 30, height: 30, top: 5,
+              style={{ width: 25, height: 25, top: 5,
                // tintColor:focused ?'': 'green' 
                }}
             />
@@ -59,7 +59,7 @@ function TabStack() {
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Image
-              source={imagePath.cartBasket}
+              source={imagePath.profileImage}
               style={{ height: 31, width: 31, top: 5 }}
             />
           ),
