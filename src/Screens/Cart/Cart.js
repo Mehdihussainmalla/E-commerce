@@ -1,17 +1,24 @@
+import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import { Title } from 'react-native-paper';
+
 import WrapperContainer from '../../Components/WrapperContainer';
 import imagePath from '../../constants/imagePath';
+import navigationStrings from '../../navigation/navigationStrings';
 import { styles } from './style';
 
-const Cart = ({navigation}) => {
+const Cart = () => {
+  const navigation =useNavigation()
   return (
     <WrapperContainer>
       <View style={styles.head}>
          <View style={styles.cartview}>
            <TouchableOpacity  
-          onPress={()=> navigation.navigate('Home')}
+          onPress={()=> navigation.navigate(navigationStrings.HOME,
+          //  {title:'welcome back'}
+            )}
            >
             <View style={styles.imageview}> 
               <Image
@@ -41,7 +48,7 @@ const Cart = ({navigation}) => {
             you !
           </Text>
 
-          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+          <TouchableOpacity onPress={() => navigation.goBack(navigationStrings.HOME)}>
           <View style={styles.buttonview}>
             
               <Text style={styles.buttontext}>START SHOPPING</Text>

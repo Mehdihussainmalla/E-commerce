@@ -4,7 +4,7 @@ export default {
   HOME: 'home',
   CART:'cart',
   PROFILE :'profile',
-  MYORDERS :'myorders',
+  MYORDERS :'My Orders',
   TABSTACK:'tabStack',
   DRAWER:'drawer',
   MAINSTACK :'mainstack'

@@ -1,133 +1,144 @@
-import {StyleSheet,} from 'react-native';
+import { StyleSheet, } from 'react-native';
 export const styles = StyleSheet.create({
 
-    signupview:{
-        height:'25%',
-        width:'100%' ,
-    
+    signupview: {
+        height: '25%',
+        width: '100%',
+        justifyContent: 'center',
+
+
     },
-    bgc:{
-        height:'100%',width:'100%',
-        paddingTop:2,
-        //marginTop:5
+    usernameview: {
+        flexDirection:'row',
+        justifyContent:'flex-start',
+        height:50,
+        width:'100%'
+        
+    },
+    usericon:{
+        height:20,
+        width:'8%',
+        margin:8,
+        marginLeft:10,
+    },
+    input1:{
+        borderRadius:10,
+        height:35,
+        width:'80%',
+        color:'black',
+        backgroundColor:'lightgrey',
+        paddingTop:5,
     },
     emailview:{
-       borderTopRightRadius:10,
-        marginTop:30,
-        height:45,
-        paddingTop:10,
-        width:'100%',
-       justifyContent:'flex-start',
         flexDirection:'row',
-        marginLeft:10,
-        alignItems:'center'
+        justifyContent:'flex-start',
+        height:50,
+        width:'100%'
 
     },
-    emaillogo:{
-        //margin:10,
-        height:23,
-        width:20,
-       // marginRight:20,
-        //marginLeft:15,
-    },
-    TextInput:{
-        height:30,
-       backgroundColor:'lightgrey',
-        fontSize:15,
+    emailicon:{
+        height:20,
+        width:'8%',
+        margin:8,
         marginLeft:10,
+    },
+    input2:{
+        borderRadius:10,
+        height:35,
         width:'80%',
-    },
-    passwordview:{
-      
-        marginTop:20,
-        height:45,
-        paddingTop:10,
-        width:'100%',
-       justifyContent:'flex-start',
-        flexDirection:'row',
-        marginLeft:10,
-        alignItems:'center'
-
-    },
-    passwordlogo:{
-        //margin:10,
-        height:24,
-        width:20,
-       // marginRight:20,
-        //marginLeft:15,
-    },
-    TextInput2:{
-        height:30,
+        color:'black',
         backgroundColor:'lightgrey',
-        fontSize:15,
-        marginLeft:10,
+        paddingTop:5,
+
+    },
+
+    passwordview:{
+        flexDirection:'row',
+        justifyContent:'flex-start',
+        height:50,
+        width:'100%'
+
+
+    },
+        passwordicon:{
+            height:20,
+            width:'8%',
+            margin:8,
+            marginLeft:10,
+
+    },
+    input3:{
+        borderRadius:10,
+        height:35,
         width:'80%',
+        color:'black',
+        backgroundColor:'lightgrey',
+        paddingTop:5,
+        
+
+
+    }  ,
+    createpasswordview:{
+        flexDirection:'row',
+        justifyContent:'flex-start',
+        height:50,
+        width:'100%'
+
+
+    },
+        createpasswordicon:{
+            height:20,
+            width:'8%',
+            margin:8,
+            marginLeft:10,
+
+    },
+    input4:{
+        borderRadius:10,
+        height:35,
+        width:'80%',
+        color:'black',
+        backgroundColor:'lightgrey',
+        paddingTop:5,
+        
+
+
     },
     btnview:{
-        height:35,
-        width:'55%',
-        backgroundColor:'blue',
-        marginTop:25,
-        marginLeft:95,
-        borderRadius:20
-    },
-    signupbtn:{
+        marginLeft:80,
+        borderRadius:8,
+        margin:20,
+        height:45,
+        width:'60%',
+        //paddingLeft:10,
+        alignContent:'center',
+        justifyContent:'center',
+        backgroundColor:'skyblue'
+    } ,
+    btn:{
         fontSize:20,
         textAlign:'center',
-        paddingTop:5,
-        fontWeight:'600',
+        paddingTop:1,
         color:'#ffff'
-       
+    } ,
+    bottontext:{
+        justifyContent:'space-between',
+        flexDirection:'row'
     },
-    cnfmpassView:{
-        marginTop:20,
-        height:45,
-        paddingTop:10,
-        width:'100%',
-       justifyContent:'flex-start',
-        flexDirection:'row',
+    text1:{
+        fontWeight:'300',
         marginLeft:10,
-        alignItems:'center'
-
     },
-    confmpasswordlogo:{
-        //margin:10,
-        height:24,
-        width:20,
-       // marginRight:20,
-        //marginLeft:15,
 
-    },
-    TextInput3:{
-        height:30,
-        backgroundColor:'lightgrey',
+    signinbtn:{
         fontSize:15,
-        marginLeft:10,
-        width:'80%',
-    },
-    signtext:{
+        fontWeight:'500',
+        marginRight:10,
+        color:'red'
+    }
 
-        height: 20,
-        width: '70%',
-        justifyContent: 'space-between',
-        flexDirection: 'row',
-        margin: 12
-    },
 
-text1:{
-    //color: 'blue',
-    marginRight: 45,
-    fontWeight:'300'
 
-},
-text2:{
-    color:'red',
-    fontSize:15,
-    fontWeight:'400',
-    marginRight:50
-}
-  
-   
 
 
 })

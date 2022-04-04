@@ -4,52 +4,71 @@ import {View, Text,Image,TextInput, ImageBackground,} from 'react-native';
 import imagePath from '../../constants/imagePath';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { styles } from './style';
+import navigationStrings from '../../navigation/navigationStrings';
 
 
-const SignUp = () => {
+const SignUp = ({navigation}) => {
   return (
       <WrapperContainer>
-        <View  style={{flex:1,}}>
+        <View
+          style={{flex:1,height:'100%',width:'100%',padding:16}}>
 
-          <View style={styles.signupview}>
-            <ImageBackground 
+           <View style={styles.signupview}>
+            {/* <ImageBackground 
             style={styles.bgc}            
-            source={imagePath.bgc}/>
-          </View>
+            source={imagePath.bgc}/> */}
 
-          <View  style={styles.emailview}>
-              
-            <Image source={imagePath.emailLogo}  style={styles.emaillogo}/>
-            <TextInput style={styles.TextInput} placeholder='enter your mail' />
-        
+            <Text style={{fontSize:25,alignContent:'center',textAlign:'center',fontWeight:'500'}}>
+              Create
+            </Text>
+            <Text style={{fontSize:25,alignContent:'center',textAlign:'center',fontWeight:'500'}}>
+               Account
+            </Text>
+          </View> 
+          <View  style={styles.usernameview}>
+           
+             <Image  style={styles.usericon}  
+             source={ imagePath.emailLogo}/>
+          <TextInput  style={styles.input1} placeholder="your name"/>
+            </View>
+
+            <View  style={styles.emailview}>
+           
+             <Image  style={styles.emailicon}  
+             source={ imagePath.emailLogo}/>
+          <TextInput  style={styles.input2} placeholder=" enter your email"/>
             </View>
             <View  style={styles.passwordview}>
-              
-            <Image source={imagePath.passwordIcon}  style={styles.passwordlogo}/>
-            <TextInput style={styles.TextInput2} placeholder='enter password' secureTextEntry={true}/>
-        
+           
+             <Image  style={styles.passwordicon}  
+             source={ imagePath.emailLogo}/>
+          <TextInput  style={styles.input3} secureTextEntry={true} placeholder=" Create Password"/>
             </View>
-            <View  style={styles.cnfmpassView}>
-              
-            <Image source={imagePath.passwordIcon}  style={styles.confmpasswordlogo}/>
-            <TextInput style={styles.TextInput3} placeholder='enter password' secureTextEntry={true}/>
+            <View  style={styles.createpasswordview}>
+           
+           <Image  style={styles.createpasswordicon}  
+           source={ imagePath.emailLogo}/>
+        <TextInput  style={styles.input4} secureTextEntry={true} placeholder="Confirm Password"/>
+          </View>
+          
+          <View  style={styles.btnview}>
+            <Text style={styles.btn}>SignUp</Text>
+          </View>
+
+          <View style={styles.bottontext}>
+            <Text style={styles.text1}>You already have an account?</Text>
+
+            <TouchableOpacity  onPress={()=> navigation.navigate(navigationStrings.LOGIN)}>
+            <Text style={styles.signinbtn}>Sign In</Text>
+            </TouchableOpacity>
+          </View>
+          
+           
+
+          </View>
         
-            </View>
-            <View style={styles.btnview}>
-    
-              <Text style={styles.signupbtn}>Sign Up</Text>
+
       
-            </View>
-            <View style={styles.signtext}>
-              
-              <Text style ={styles.text1}>already have an account? </Text>
-              <TouchableOpacity>
-               <Text style={styles.text2}>signup</Text>
-               </TouchableOpacity>
-            </View>
-
-
-            </View>
             
             
     </WrapperContainer>
