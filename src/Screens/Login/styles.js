@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     color:'blue',
     fontSize:25,
     fontWeight:'bold',
-    textAlign:'center',
+  
     marginTop:15,
   },
   login:{
