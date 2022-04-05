@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
     usernameview: {
         flexDirection:'row',
         justifyContent:'flex-start',
-        height:50,
+        height:40,
         width:'100%'
         
     },
@@ -29,12 +29,13 @@ export const styles = StyleSheet.create({
         width:'80%',
         color:'black',
         backgroundColor:'lightgrey',
-        padding:moderateVerticalScale(8)
+        padding:moderateVerticalScale(8),
+        borderWidth:0.5
     },
     emailview:{
         flexDirection:'row',
         justifyContent:'flex-start',
-        height:50,
+        height:40,
         width:'100%'
 
     },
@@ -50,13 +51,14 @@ export const styles = StyleSheet.create({
         width:'80%',
         color:'black',
         backgroundColor:'lightgrey',
-        padding: moderateVerticalScale(8) 
+        padding: moderateVerticalScale(8) ,
+        borderWidth:0.5
        },
 
     passwordview:{
         flexDirection:'row',
         justifyContent:'flex-start',
-        height:50,
+        height:40,
         width:'100%'
 
 
@@ -75,7 +77,8 @@ export const styles = StyleSheet.create({
         width:'80%',
         color:'black',
         backgroundColor:'lightgrey',
-        padding:moderateVerticalScale(8)
+        padding:moderateVerticalScale(8),
+        borderWidth:0.5
         
 
 
@@ -83,7 +86,7 @@ export const styles = StyleSheet.create({
     createpasswordview:{
         flexDirection:'row',
         justifyContent:'flex-start',
-        height:50,
+        height:40,
         width:'100%'
 
 
@@ -102,7 +105,8 @@ export const styles = StyleSheet.create({
         width:'80%',
         color:'black',
         backgroundColor:'lightgrey',
-        padding:moderateVerticalScale,
+        padding:moderateVerticalScale(8),
+        borderWidth:0.5
         
 
 
@@ -116,7 +120,7 @@ export const styles = StyleSheet.create({
         //paddingLeft:10,
         alignContent:'center',
         justifyContent:'center',
-        backgroundColor:'skyblue'
+        backgroundColor:'skyblue',borderWidth:0.5
     } ,
     btn:{
         fontSize:20,
@@ -138,7 +142,31 @@ export const styles = StyleSheet.create({
         fontWeight:'500',
         marginRight:10,
         color:'red'
-    }
+    },
+    label1: {
+        fontSize: 25,
+        alignContent: 'center',
+        textAlign: 'center',
+        fontWeight: '500',
+      },
+      label2: {
+        fontSize: 25,
+        alignContent: 'center',
+        textAlign: 'center',
+        fontWeight: '500',
+      },
+      label3: {
+        fontSize: 25,
+        alignContent: 'center',
+        textAlign: 'center',
+        fontWeight: '500',
+      },
+      label4: {
+        fontSize: 25,
+        alignContent: 'center',
+        textAlign: 'center',
+        fontWeight: '500',
+      }
 
 
 
