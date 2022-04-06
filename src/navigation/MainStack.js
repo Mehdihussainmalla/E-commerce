@@ -33,7 +33,7 @@ export default function (Stack) {
      // options={{title:'Profile'}}
         name={navigationStrings.PROFILE}
         component={Profile}
-        options={{headerShown: true}}
+        options={{headerShown: false}}
       /> 
       {/* <Stack.Screen
         name={navigationStrings.DRAWER}

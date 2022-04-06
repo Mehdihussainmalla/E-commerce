@@ -19,15 +19,7 @@ export default function DrawerStack() {
              
            }}
          />
-      {/* <Drawer.Screen
-        name={navigationStrings.HOME}
-        component={Home}
-        options={{
-          headerShown: false,
           
-        }}
-      /> */}
-      
 
     </Drawer.Navigator>
   );

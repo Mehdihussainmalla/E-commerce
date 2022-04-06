@@ -8,16 +8,22 @@ import AuthStack from './AuthStack';
 import { DrawerCustom } from './DrawerCustom';
 import MainStack from './MainStack';
 import navigationStrings from './navigationStrings';
+import { useSelector } from 'react-redux';
+
+
 
 const Stack = createDrawerNavigator();
 
+
 export default function Routes() {
+  //const userData =useSelector(state=>state.Continue)
+  const userData=useSelector(state=>state.Continue)
 
   return (
     <NavigationContainer>
      
 
-      {false? MainStack(Stack) : AuthStack(Stack)}
+      {userData? MainStack(Stack) : AuthStack(Stack)}
 
     </NavigationContainer>
   );

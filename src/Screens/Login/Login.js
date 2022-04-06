@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import WrapperContainer from '../../Components/WrapperContainer';
 import {
   View,
@@ -8,14 +8,19 @@ import {
   ImageBackground,
   Button,
 } from 'react-native';
-import { styles } from './styles';
+// import FlashMessage, { showMessage } from "react-native-flash-message";
+import {styles} from './styles';
 import imagePath from '../../constants/imagePath';
+
 import navigationStrings from '../../navigation/navigationStrings';
-import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-export default function Login({ navigation }) {
+import {TouchableOpacity} from 'react-native-gesture-handler';
+
+import {useDispatch} from 'react-redux';
+import {Loginbtn} from '../../Redux/Actions/Type';
+
+export default function Login({navigation}) {
   const emailRegex = /^[\w-\.\_\$]{2,}@([\w]{3,5}\.)[\w]{2,4}$/;
-  const passRegex = /^[0-9]{4,8} $/;
+  const passWrdRegz = /^(?=.*\d)(?=.*[\wa-z])(?=.)(?=.*).{8,}$/;
 
   const [email, setemail] = useState('');
   const [emailerror, setemailError] = useState(false);
@@ -23,17 +28,16 @@ export default function Login({ navigation }) {
   const [password, setPassword] = useState('');
   const [passError, setPassError] = useState(false);
 
-  const passWrdRegz = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+  const dispatch = useDispatch();
 
   // function preg_match (regex, str) {
   //   return (new RegExp(regex).test(str))
   // }
 
-
   function preg_match(regex, str) {
     if (new RegExp(regex).test(str)) {
       // return regex.exec(str);
-      return true
+      return true;
     }
     return false;
   }
@@ -48,7 +52,6 @@ export default function Login({ navigation }) {
   //   }
   // }
 
-
   // function preg_match (emailRegex, passwordRegez, email, password) {
   //   if (new RegExp(emailRegex).test(email) && RegExp(passwordRegez).test(password)){
   //     // return regex.exec(str);
@@ -59,23 +62,22 @@ export default function Login({ navigation }) {
   // }
 
   const OnSubmit = (emailRegex, passWrdRegz, email, password) => {
-    
-    const isValid = preg_match(emailRegex, email,)
+    const isValid = preg_match(emailRegex, email);
     if (!isValid) {
-      alert('please input the correct email')
-    } else if (!preg_match(passWrdRegz, password,)) {
-      alert('please input the correct password')
+      //alert('please input the correct email')
+      // showMessage({   message: "My message title",
+      //   description: "My message description",
+      //    type: "success", })
+    } else if (!preg_match(passWrdRegz, password)) {
+      alert('please input the correct password');
     } else {
       navigation.navigate(navigationStrings.SIGNUP);
     }
-
-  }
-
-
+  };
 
   // const handleText = () => {
-    // if (email != '') {
-    //   setemailError(false);
+  // if (email != '') {
+  //   setemailError(false);
 
   //   if (emailRegex.test(email)) {
   //     setemailError(false);
@@ -84,7 +86,6 @@ export default function Login({ navigation }) {
   //       setPassError(false);
   //       if (passRegex.test(password)) {
   //         setPassError(false)
-
 
   //         navigation.navigate(navigationStrings.SIGNUP);
   //       } else {
@@ -100,7 +101,7 @@ export default function Login({ navigation }) {
 
   return (
     <WrapperContainer>
-      <View style={{ flex: 1, height: '100%', width: '100%', padding: 16 }}>
+      <View style={{flex: 1, height: '100%', width: '100%', padding: 16}}>
         <View style={styles.loginview}>
           <Text style={styles.label1}>Welcome To</Text>
           <Text style={styles.label2}>E-Commerce</Text>
@@ -113,8 +114,8 @@ export default function Login({ navigation }) {
             onChangeText={event => setemail(event)}
           />
         </View>
-        {emailerror ?
-          <View style={{ paddingBottom: 4 }}>
+        {emailerror ? (
+          <View style={{paddingBottom: 4}}>
             <Text
               style={{
                 textAlign: 'center',
@@ -125,8 +126,7 @@ export default function Login({ navigation }) {
               Invalid Email
             </Text>
           </View>
-          : null
-        }
+        ) : null}
 
         <View style={styles.passwordview}>
           <Image style={styles.passwordicon} source={imagePath.passwordIcon} />
@@ -136,24 +136,26 @@ export default function Login({ navigation }) {
             placeholder="Password"
             onChangeText={event => setPassword(event)}
           />
-        </View>{
-          passError ?
-            <View style={{ paddingBottom: 4 }}>
-              <Text
-                style={{
-                  textAlign: 'center',
-                  color: 'red',
-                  fontWeight: '300',
-                  fontSize: 12,
-                }}>
-                Invalid Password
-              </Text>
-            </View> : null
-        }
-
+        </View>
+        {passError ? (
+          <View style={{paddingBottom: 4}}>
+            <Text
+              style={{
+                textAlign: 'center',
+                color: 'red',
+                fontWeight: '300',
+                fontSize: 12,
+              }}>
+              Invalid Password
+            </Text>
+          </View>
+        ) : null}
 
         <View style={styles.btnview}>
-          <TouchableOpacity activeOpacity={0.3} onPress={() => { OnSubmit(emailRegex, passWrdRegz, email, password) }}>
+          {/* onPress={() => { OnSubmit(emailRegex, passWrdRegz, email, password) }} */}
+          <TouchableOpacity
+            activeOpacity={0.3}
+            onPress={()=>dispatch(Loginbtn())}>
             <Text style={styles.btn}> Sign In</Text>
           </TouchableOpacity>
         </View>

@@ -143,34 +143,6 @@ export const styles = StyleSheet.create({
         marginRight:10,
         color:'red'
     },
-    label1: {
-        fontSize: 25,
-        alignContent: 'center',
-        textAlign: 'center',
-        fontWeight: '500',
-      },
-      label2: {
-        fontSize: 25,
-        alignContent: 'center',
-        textAlign: 'center',
-        fontWeight: '500',
-      },
-      label3: {
-        fontSize: 25,
-        alignContent: 'center',
-        textAlign: 'center',
-        fontWeight: '500',
-      },
-      label4: {
-        fontSize: 25,
-        alignContent: 'center',
-        textAlign: 'center',
-        fontWeight: '500',
-      }
-
-
-
-
 
 })
 
